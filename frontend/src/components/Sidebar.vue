@@ -45,9 +45,13 @@
     <p class="credits">
       <span>
         <span v-if="disableExternal">File Browser</span>
-        <a v-else rel="noopener noreferrer" target="_blank" href="https://github.com/filebrowser/filebrowser">File Browser</a>
+        <a v-else rel="noopener noreferrer" target="_blank" href="https://github.com/zoidy/filebrowser">File Browser</a>
         <span> {{ version }}</span>
       </span>
+      <span>
+      Commit SHA:
+      <a rel="noopener noreferrer" target="_blank" href="#">{{ commitSHA }}</a>
+      </span>      
       <span><a @click="help">{{ $t('sidebar.help') }}</a></span>
     </p>
   </nav>
@@ -56,7 +60,7 @@
 <script>
 import { mapState, mapGetters } from 'vuex'
 import * as auth from '@/utils/auth'
-import { version, signup, disableExternal, noAuth, authMethod } from '@/utils/constants'
+import { version, commitSHA, signup, disableExternal, noAuth, authMethod } from '@/utils/constants'
 
 export default {
   name: 'sidebar',
@@ -68,6 +72,7 @@ export default {
     },
     signup: () => signup,
     version: () => version,
+    commitSHA: () => commitSHA,
     disableExternal: () => disableExternal,
     noAuth: () => noAuth,
     authMethod: () => authMethod
