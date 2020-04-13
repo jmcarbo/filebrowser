@@ -31,6 +31,7 @@ func handleWithStaticData(w http.ResponseWriter, r *http.Request, d *data, box *
 		"DisableExternal": d.settings.Branding.DisableExternal,
 		"BaseURL":         d.server.BaseURL,
 		"Version":         version.Version,
+		"CommitSHA":       version.CommitSHA,
 		"StaticURL":       staticURL,
 		"Signup":          d.settings.Signup,
 		"NoAuth":          d.settings.AuthMethod == auth.MethodNoAuth,
