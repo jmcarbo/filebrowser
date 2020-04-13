@@ -6,6 +6,7 @@ const recaptcha = window.FileBrowser.ReCaptcha
 const recaptchaKey = window.FileBrowser.ReCaptchaKey
 const signup = window.FileBrowser.Signup
 const version = window.FileBrowser.Version
+const commitSHA = window.FileBrowser.CommitSHA
 const logoURL = `/${staticURL}/img/logo.svg`
 const noAuth = window.FileBrowser.NoAuth
 const authMethod = window.FileBrowser.AuthMethod
@@ -21,6 +22,7 @@ export {
   recaptchaKey,
   signup,
   version,
+  commitSHA,
   noAuth,
   authMethod,
   loginPage,
