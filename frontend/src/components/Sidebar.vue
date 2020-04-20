@@ -50,7 +50,9 @@
       </span>
       <span>
       Commit SHA:
-      <a rel="noopener noreferrer" target="_blank" href="#">{{ commitSHA }}</a>
+      <a rel="noopener noreferrer" target="_blank" :href="'https://github.com/zoidy/filebrowser/commit/'+commitSHA">
+        <span style="width:3.7em;overflow:hidden;display:inline-block;white-space:nowrap;vertical-align:bottom;">{{ commitSHA }}</span>
+      </a>
       </span>      
       <span><a @click="help">{{ $t('sidebar.help') }}</a></span>
     </p>
